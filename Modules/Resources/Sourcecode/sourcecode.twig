@@ -1,0 +1,44 @@
+<div class="content-inner">
+    <section id="home-section" class="doc-section">
+        <h2 class="section-title">Sourcecode</h2>
+        <div class="section-block">
+            <p>
+                When writing configurations it is easy to make a mistake. Please reference these XSD schemas in your
+                configuration files to avoid human errors.
+            </p>
+            <div class="callout-block callout-success">
+                <div class="icon-holder">
+                    <i class="fas fa-thumbs-up"></i>
+                </div><!--//icon-holder-->
+                <div class="content">
+                    <h4 class="callout-title">No need to manually enter your schema definition:</h4>
+                    <p>
+                        You can use the optional <a href="">ERD editor</a> to define your datamodel via the admin panel.
+                        The resulting schema information will then be stored in the database it self which may be
+                        inconvenient if you would like to distribute your system at any later time but the resulting
+                        schema.xml file can be obtained via the <a href="">API</a>.
+                    </p>
+                </div><!--//content-->
+            </div>
+
+            {% for repository in repositories %}
+                <hr/>
+                <h3 class="block-title mt15">{{ schema.getFileName() }}</h3>
+                <p>
+                    In short: {{ schema.getSynopsis() }}<br />
+                </p>
+                <p>
+                    {{ schema.getDescription() }}
+                </p>
+                <p>
+                    Schema: <a href="{{ schema.getSchemaUrl() }}" target="_blank">{{ schema.getSchemaUrl() }}</a><br />
+                    Repository: <a href="{{ schema.getRepoUrl() }}" target="_blank">{{ schema.getRepoUrl() }}</a><br />
+
+                </p>
+            {% endfor %}
+
+        </div>
+
+    </section><!--//doc-section-->
+
+</div><!--//content-inner-->

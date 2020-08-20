@@ -1,0 +1,32 @@
+<div class="content-inner">
+    <section id="home-section" class="doc-section">
+        <h2 class="section-title">Welcome!</h2>
+        <div class="section-block">
+            <p>
+                {{ system_name }} is a set of tools that let you quickly create and distribute (mock) API's or even
+                whole networks of interconnected API's that can communicate with each via a secure decentralized network
+                based on <a target="" href="https://nlx.io/">Nlx</a> technology.
+            </p>
+            <p>
+            <a href="{{ site_map.Installation.getUrl() }}" class="btn btn-green"><i class="fas fa-download"></i> Install {{ system_name }}</a>
+            </p>
+            <h3 class="block-title mt15">What is {{ system_name }}?</h3>
+            <p>
+                {{ system_name }} aims to be a generic, easy to understand yet flexible solution for building
+                interconnected services. The build was commisioned by the <a href="https://novum.nu">Novum Innovation Lab</a>
+                as part of a project called "1 overheid" (one government). The system is still under heavy development
+                and many components are not production ready. It is however possible to install and run the code and
+                play with it.
+            </p>
+            <h3 class="block-title mt15">What do i get?</h3>
+            <p>
+               That depends on what you install. At it's <a target="_blank" href="{{ repositories.core.url }}">core</a>
+                you get a code generation tool that will create an API and an admin panel for you. The configuration
+                of the API is done trough an XML file which in turn is validated against an <a href="{{ site_map.Schemas.getUrl() }}">XSD schema</a> file.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>

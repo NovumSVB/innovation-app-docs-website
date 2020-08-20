@@ -1,0 +1,37 @@
+{
+    "name": "novum/site-innovation-app-docs",
+    "type": "novum-site",
+    "description": "This is the sourcecode of the  \"package\" that belongs to a fake \"\" system",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Boutkam",
+            "email": "anton@novum.nu"
+        },
+        {
+            "name": "Novum, het innovatielab van de Sociale Verzekeringsbank",
+            "email": "info@novum.nu"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "PHP": ">=7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "InnovationApp\\": "modules"
+        }
+    },
+    "prefer-stable": true,
+    "homepage": "https://innovatie.app.demo.novum.nu",
+    "stability": "dev",
+    "keywords": [
+        "novum",
+        "innovatie lab",
+        "nlx",
+        "package"
+    ],
+    "devDependencies": {
+        "phpunit/phpunit": "^9.3.7"
+    }
+}

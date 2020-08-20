@@ -1,0 +1,62 @@
+<div class="content-inner">
+    <section id="home-section" class="doc-section">
+        <h2 class="section-title">Server requirements</h2>
+        <div class="section-block">
+            <p>
+                Unfortunately there are quite some dependencies that need to be met to get the full system up and
+                running. The list below is an attempt to provide an as complete as possible list to get the system up
+                and running online. Because the system is based on individually installable modules, those modules may
+                have additional requirements not specified here. If you find anything is missing from this list please
+                contact me or submit a pull request, a json file with requirements can be found
+                <a href="{{ url.requirements_repo }}" target="_blank">here</a>. This file is used to feed the page that
+                you are looking at directly.
+            </p>
+            <h4>Composer</h4>
+            <p>
+                Both modules and the core system can and should be installed via <a href="https://getcomposer.org/" target="_blank">composer</a>.
+                Composer will "automagically" install all the additional dependencies for you but the main requirements
+                written below need to be met.
+            </p>
+
+            <div class="callout-block callout-success">
+                <div class="icon-holder">
+                    <i class="fas fa-info"></i>
+                </div><!--//icon-holder-->
+                <div class="content">
+                    <h4 class="callout-title">No need to install this manually, you can use Docker</h4>
+                    <p>
+                        It makes more sense to install your own server if you plan to go deep in the code or actually
+                        create something production ready. If you are just interested in playing with the software a
+                        bit then you are probably better off by installing via <a href="{{ site_map.Docker.getUrl() }}">Docker</a>.
+                    </p>
+                </div><!--//content-->
+            </div>
+
+            <h4>Server software</h4>
+            <p>
+                These software packages must be installed prior to installing the system it self.
+            </p>
+            <hr />
+            {% for package in requirements.packages %}
+                <h5>{{ package.package_name }}</h5>
+                {% if package.description %}
+                <p>
+                    {{ package.description }}
+                </p>
+                {% endif %}
+                {% if package.package_module %}
+                    <h6>Required extensions:</h6>
+                    <ul>
+                    {% for module in package.package_module %}
+                        <li><strong>{{ module.name }}</strong> {{ module.description }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                <hr />
+            {% endfor %}
+
+
+    </section><!--//doc-section-->
+
+</div><!--//content-inner-->
+

@@ -1,0 +1,47 @@
+code
+{
+  div.bash
+  {
+    background-color: black!important;
+
+
+  }
+
+}
+.btn-docker, a.btn-docker {
+  color: rgb(255, 255, 255) !important;
+  background: $docker;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $docker;
+  border-image: initial;
+}
+
+.btn-gitlab, a.btn-gitlab {
+  color: rgb(255, 255, 255) !important;
+  background: $gitlab;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $gitlab;
+  border-image: initial;
+}
+
+.btn-php, a.btn-php {
+  color: rgb(255, 255, 255) !important;
+  background: $php;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $php;
+  border-image: initial;
+}
+
+.docker{
+  color: $docker !important;
+}
+.gitlab {
+  color: $gitlab;
+}
+
+.php {
+  color: $php;
+}
