@@ -1,7 +1,7 @@
 {
     "name": "novum/site-innovation-app-docs",
     "type": "novum-site",
-    "description": "This is the sourcecode of the  \"package\" that belongs to a fake \"\" system",
+    "description": "These files that make up the documentation of the Novum Innovation App project",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +15,10 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "PHP": ">=7.3"
+        "PHP": ">=7.3",
+        "hurah/hurah-installer": "*",
+        "novum/innovation-app-core": "*"
+
     },
     "autoload": {
         "psr-4": {
