@@ -33,7 +33,7 @@
         "novum",
         "innovatie lab",
         "nlx",
-        "package"
+        "documentation"
     ],
     "devDependencies": {
         "phpunit/phpunit": "^9.3.7"
