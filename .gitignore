@@ -1,3 +1,4 @@
 vendor/
+.idea/
 .live_domain
 .dev_domain

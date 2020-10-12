@@ -16,6 +16,7 @@
     "minimum-stability": "dev",
     "require": {
         "PHP": ">=7.3",
+        "novum/domain-innovation-app-docs" : "*",
         "hurah/hurah-installer": "*",
         "novum/innovation-app-core": "*"
 
@@ -36,5 +37,9 @@
     ],
     "devDependencies": {
         "phpunit/phpunit": "^9.3.7"
+    },
+    "extra": {
+        "install_dir": "docs.demo.novum.nu"
     }
+
 }
