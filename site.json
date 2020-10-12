@@ -1,0 +1,19 @@
+{
+  "config_dir": "novum.docs",
+  "namespace": "InnovationApp",
+  "site": {
+    "dev": {
+      "protocol": "http",
+      "domain": "docs.demo.novum.nuidev.nl"
+    },
+    "test": {
+      "protocol": "https",
+      "domain": "docs.test.demo.novum.nu"
+    },
+    "prod": {
+      "protocol": "https",
+      "domain": "docs.demo.novum.nu"
+    }
+  },
+  "server_admin": "anton@novum.nu"
+}
