@@ -5,7 +5,7 @@ function getSiteSettings()
         'page_title_html' => '<span class="text-highlight">Innovation</span><span class="text-bold">App</span>',
         'system_name' => 'Innovation App',
         'module_dir' => 'Modules',
-        'config_dir' => 'innovation.app',
+        'config_dir' => 'novum.docs',
         'namespace' => 'InnovationApp',
         'protocol' => isset($_SERVER['IS_DEVEL']) ? 'http' : 'https',
         'live_domain' => 'innovation.app.novum.nu',
