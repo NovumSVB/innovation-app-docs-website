@@ -4,7 +4,7 @@ namespace InnovationApp;
 use _Default\ControllerFactory as _DefaultControllerFactory;
 use InnovationApp\Classes\PageManager;
 use InnovationApp\Classes\Page;
-use InnovationApp\Modules\Home\Controller;
+use InnovationApp\modules\Home\Controller;
 use Core\IControllerFactory;
 use Core\MainController;
 

@@ -19,7 +19,6 @@
         "novum/domain-innovation-app-docs" : "*",
         "hurah/hurah-installer": "*",
         "novum/innovation-app-core": "*"
-
     },
     "autoload": {
         "psr-4": {

@@ -29,9 +29,9 @@ function getSiteSettings()
         ],
 /*
         'schemas' => [
-            new InnovationApp\Modules\Resources\Schemas\ApiInfo\Info(),
-            new InnovationApp\Modules\Resources\Schemas\SchemaPlusCrud\Info(),
-            new InnovationApp\Modules\Resources\Schemas\SchemaXsd\Info()
+            new InnovationApp\modules\Resources\Schemas\ApiInfo\Info(),
+            new InnovationApp\modules\Resources\Schemas\SchemaPlusCrud\Info(),
+            new InnovationApp\modules\Resources\Schemas\SchemaXsd\Info()
         ]
 */
     ];

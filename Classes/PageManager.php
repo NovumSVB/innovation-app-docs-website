@@ -1,16 +1,16 @@
 <?php
 namespace InnovationApp\Classes;
 
-use InnovationApp\Modules\Api as Api;
-use InnovationApp\Modules\Api\Documentation as ApiDocumentation;
-use InnovationApp\Modules\Introduction as Intro;
-use InnovationApp\Modules\Installation as Install;
-use InnovationApp\Modules\Components as Components;
-use InnovationApp\Modules\Resources as Resources;
-use InnovationApp\Modules\Resources\Schemas as Schemas;
-use InnovationApp\Modules\Resources\Sourcecode as Sourcecode;
-use InnovationApp\Modules\Home as Home;
-use InnovationApp\Modules\Demo as Demo;
+use InnovationApp\modules\Api as Api;
+use InnovationApp\modules\Api\Documentation as ApiDocumentation;
+use InnovationApp\modules\Introduction as Intro;
+use InnovationApp\modules\Installation as Install;
+use InnovationApp\modules\Components as Components;
+use InnovationApp\modules\Resources as Resources;
+use InnovationApp\modules\Resources\Schemas as Schemas;
+use InnovationApp\modules\Resources\Sourcecode as Sourcecode;
+use InnovationApp\modules\Home as Home;
+use InnovationApp\modules\Demo as Demo;
 
 class PageManager
 {
