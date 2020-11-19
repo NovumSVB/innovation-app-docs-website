@@ -2,14 +2,10 @@
 
 namespace InnovationApp\modules\Demo\Detail;
 
-use Core\Config;
-use Core\Json\JsonUtils;
-use GuzzleHttp\Client;
+use Api\Store\Plugin\Vo\DataSource;
 use InnovationApp\Classes\PageManager;
 use InnovationApp\Classes\SiteBaseController;
-use InnovationApp\Classes\Vo\DataSource;
 use InnovationApp\modules\Demo\ApiHelper;
-use Model\Logging\Except_log;
 
 class Controller extends SiteBaseController
 {

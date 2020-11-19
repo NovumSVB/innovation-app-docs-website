@@ -4,7 +4,7 @@
   "site": {
     "dev": {
       "protocol": "http",
-      "domain": "docs.demo.novum.nuidev.nl"
+      "domain": "docs.innovatieapp.nl"
     },
     "test": {
       "protocol": "https",

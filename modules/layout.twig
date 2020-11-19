@@ -117,6 +117,9 @@
     </div><!--//container-->
 </footer><!--//footer-->
 
+{% for js_file in autoload_js_files%}
+    <script src="{{ js_file }}"></script>
+{%  endfor %}
 
 <!-- Main Javascript -->
 <script type="text/javascript" src="/assets/plugins/popper/popper.min.js"></script>
