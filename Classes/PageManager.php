@@ -7,6 +7,8 @@ use InnovationApp\modules\Introduction as Intro;
 use InnovationApp\modules\Installation as Install;
 use InnovationApp\modules\Components as Components;
 use InnovationApp\modules\Resources as Resources;
+use InnovationApp\modules\Commands as Commands;
+use InnovationApp\modules\Commands\Single as Command;
 use InnovationApp\modules\Resources\Schemas as Schemas;
 use InnovationApp\modules\Resources\Sourcecode as Sourcecode;
 use InnovationApp\modules\Home as Home;
@@ -14,6 +16,21 @@ use InnovationApp\modules\Demo as Demo;
 
 class PageManager
 {
+    static function isActive(string $sUrl, Page $oPage) : bool {
+
+        if(strpos($oPage->getUrl(), '/\/') === 0)
+        {
+            if(preg_match($oPage->getUrl(),  $sUrl))
+            {
+                return true;
+            }
+
+        } else if($oPage->getUrl() === $sUrl)
+        {
+            return true;
+        }
+        return false;
+    }
     static function getActive(string $sUrl, array $aItem = null):?Page
     {
         $aAllPages = self::getAll();
@@ -22,15 +39,7 @@ class PageManager
         {
             if(isset($oPage) && $oPage instanceof Page)
             {
-                if(strpos($oPage->getUrl(), '/\/') === 0)
-                {
-                    if(preg_match($oPage->getUrl(),  $sUrl))
-                    {
-                        return $oPage;
-
-                    }
-
-                } else if($oPage->getUrl() === $sUrl)
+                if(self::isActive($sUrl, $oPage))
                 {
                     return $oPage;
                 }
@@ -63,6 +72,8 @@ class PageManager
 
             'Api' => new Page(Api\Controller::class, Api\Config::class),
                 'ApiDocumentation' => new Page(ApiDocumentation\Controller::class, ApiDocumentation\Config::class),
+            'Commands' => new Page(Commands\Controller::class, Commands\Config::class),
+                'Command' => new Page(Command\Controller::class, Command\Config::class),
         ];
     }
     /**
@@ -105,6 +116,10 @@ class PageManager
                         'page' => $aPages['Modeller']
                     ]
                 ]
+            ],
+            'Commands' => [
+                'page' => $aPages['Commands'],
+                'children' => Commands\Config::getCommands()
             ],
             'Resources' => [
                 'page' => $aPages['Resources'],

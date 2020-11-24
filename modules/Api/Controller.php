@@ -1,10 +1,17 @@
 <?php
 namespace InnovationApp\modules\Api;
 
+use InnovationApp\Classes\Crumbles;
 use InnovationApp\Classes\SiteBaseController;
 
 class Controller extends SiteBaseController
 {
+    function getCrumbles(): Crumbles
+    {
+        return new Crumbles([
+            new \InnovationApp\modules\Home\Config()
+        ]);
+    }
     function runSite():array
     {
         $aArguments = [

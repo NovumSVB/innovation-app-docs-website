@@ -3,12 +3,19 @@
 namespace InnovationApp\modules\Demo\Detail;
 
 use Api\Store\Plugin\Vo\DataSource;
+use InnovationApp\Classes\Crumbles;
 use InnovationApp\Classes\PageManager;
 use InnovationApp\Classes\SiteBaseController;
 use InnovationApp\modules\Demo\ApiHelper;
 
 class Controller extends SiteBaseController
 {
+    function getCrumbles(): Crumbles
+    {
+        return new Crumbles([
+            new \InnovationApp\modules\Home\Config()
+        ]);
+    }
     function runSite(): array
     {
         $aAllPages = PageManager::getAll();

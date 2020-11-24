@@ -1,0 +1,43 @@
+<div class="content-inner">
+    <section id="Resources-section" class="doc-section">
+        <h2 class="section-title">Console commands</h2>
+        <div class="section-block">
+            <p>
+                {{ system_name }} comes with a commandline utility that allows you to quickly perform a lot of tasks
+                that would otherwise take quite some time and are cumbersome to manually perform due to all the
+                dependencies that need to be met.
+            </p>
+            <p>
+                When Docker is used, the commandline utility is exposed as <code>./novum</code>. Invoking this command
+                will proxy or forward your input trough to the executable which runs inside the container.
+            </p>
+            <p>
+                Without Docker the command can be found inside <code>./vendor/bin/novum.php</code>
+                From here on both methods are refered to as <code>./novum</code> so if you are running these commands
+                directly you know you will need to replace <code>./novum</code> with <code>./vendor/bin/novum.php</code>.
+            </p>
+            <hr />
+            <h3>Listing available commands</h3>
+            <p>
+                When ./novum is executed without any arguments it will output a full list of available commands with
+                a short description of it's function. Many of the commands are actually combinations of other commands.
+                In practice you probably only need a few of them.
+            </p>
+            <hr />
+            <h3>Getting help</h3>
+            <p>
+                After you have seen a list of available commands you might want to know how to invoke a specific command.
+                In order for you to figure out what options are available just type help in front of the command.
+                So if for instance your goal is to bootstrap a new api and you see <code>system:create</code> in the list
+                of commands, you can get all the available options via <code>./novum help system:create</code>.
+            </p>
+            <hr />
+            <h3>Interactive</h3>
+            <p>
+                Pretty much all the commands will start an interactive session when called without any options or
+                arguments. This means that the system will start asking you questions which usually have a confined
+                set of answers or a clear example so you will know what to do.
+            </p>
+        </div>
+    </section>
+</div>

@@ -1,14 +1,23 @@
 <?php
 namespace InnovationApp\modules\Installation\Requirements;
 
-use Core\Utils;
+use InnovationApp\Classes\Crumbles;
 use InnovationApp\Classes\PageManager;
 use InnovationApp\Classes\SiteBaseController;
+use InnovationApp\modules\Installation\Config as InstallationConfig;
+use InnovationApp\modules\Installation\Requirements\Config as RequirementsConfig;
 
 class Controller extends SiteBaseController
 {
 
-
+    function getCrumbles(): Crumbles
+    {
+        return new Crumbles([
+            new \InnovationApp\modules\Home\Config(),
+            new InstallationConfig(),
+            new RequirementsConfig()
+        ]);
+    }
     function runSite():array
     {
 

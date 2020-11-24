@@ -5,12 +5,19 @@ namespace InnovationApp\modules\Demo;
 use Core\Config;
 use Core\Json\JsonUtils;
 use GuzzleHttp\Client;
+use InnovationApp\Classes\Crumbles;
 use InnovationApp\Classes\PageManager;
 use InnovationApp\Classes\SiteBaseController;
 use Model\Logging\Except_log;
 
 class Controller extends SiteBaseController
 {
+    function getCrumbles(): Crumbles
+    {
+        return new Crumbles([
+            new \InnovationApp\modules\Home\Config()
+        ]);
+    }
     function runSite(): array
     {
 

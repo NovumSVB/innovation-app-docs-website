@@ -1,9 +1,9 @@
 <nav id="doc-menu" class="nav doc-menu flex-column sticky">
     {% for item in menu %}
-        <a class="nav-link" href="{{ item.page.getUrl() }}">{{ item.page.getMenuLabel() }}</a>
+        <a class="nav-link{{ item.page.isActive() ? ' active' : '' }}" href="{{ item.page.getUrl() }}">{{ item.page.getMenuLabel() }}</a>
         {% for sub_item in item.children %}
             <nav class="doc-sub-menu nav flex-column">
-                <a class="nav-link" href="{{ sub_item.page.getUrl() }}">{{ sub_item.page.getMenuLabel() }}</a>
+                <a class="nav-link{{ sub_item.page.isActive() ? ' active' : '' }}" href="{{ sub_item.page.getUrl() }}">{{ sub_item.page.getMenuLabel() }}</a>
             </nav><!--//nav-->
         {% endfor %}
     {% endfor %}

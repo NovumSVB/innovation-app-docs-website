@@ -1,9 +1,9 @@
 <?php
 namespace InnovationApp\Contracts;
 
-interface IModuleConfig
+interface ICrumble
 {
     function getMenuLabel():string;
     function getBaseUrl():string;
-    function inMenu():bool;
+
 }

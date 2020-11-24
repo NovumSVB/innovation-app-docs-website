@@ -1,0 +1,46 @@
+<div class="content-inner">
+    <section id="Resources-section" class="doc-section">
+        <h2 class="section-title">{{ command.name }}</h2>
+        <div class="section-block">
+            <p>
+                {{ command.description|raw }}
+            </p>
+            <h3>Usage</h3>
+            <p>
+                <info>{{ command.usage }}</info>
+            </p>
+
+            {% if command.definition.arguments %}
+            <h3>Arguments</h3>
+            <dl class="row">
+                {% for argument in command.definition.arguments %}
+
+                    <dt class="col-sm-2 text-right"><info>{{ argument.name }}</info></dt>
+                    <dd class="col-sm-10 text-left">{{ argument.description|raw }}</dd>
+
+                {% endfor %}
+            </dl>
+            {% endif %}
+
+            {% if command.definition.options %}
+            <h3>Options</h3>
+            <dl class="row">
+            {% for option in command.definition.options %}
+
+                <dt class="col-sm-2 text-right"><info>{{ option.name }}</info></dt>
+                <dd class="col-sm-10 text-left">{{ option.description|raw }}</dd>
+
+
+            {% endfor %}
+            </dl>
+            {% endif %}
+
+            {% if command.help %}
+                <h3>Help</h3>
+                <p>
+                    {{ command.help|raw }}
+                </p>
+            {% endif %}
+        </div>
+    </section>
+</div>

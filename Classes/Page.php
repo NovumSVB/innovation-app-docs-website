@@ -1,9 +1,10 @@
 <?php
 namespace InnovationApp\Classes;
 
+use InnovationApp\Contracts\IMenuItem;
 use InnovationApp\Contracts\IModuleConfig;
 
-class Page
+class Page implements IMenuItem
 {
     private $oController;
     private $oConfig;
@@ -12,6 +13,9 @@ class Page
     {
         $this->oController = $oController;
         $this->oConfig = new $oConfig;
+    }
+    function isActive() : bool {
+        return PageManager::isActive(Util::getRequestUri(), $this);
     }
     function getConfig():IModuleConfig
     {
@@ -27,6 +31,11 @@ class Page
     }
     function getController($aGet, $aPost):SiteBaseController
     {
-        return new $this->oController($aGet, $aPost);
+        $oController = new $this->oController($aGet, $aPost);
+        if(!$oController instanceof SiteBaseController) {
+            throw new \InvalidArgumentException("Expected an intance of SiteBaseController");
+        }
+        $oController->setConfig($this->getConfig());
+        return $oController;
     }
 }

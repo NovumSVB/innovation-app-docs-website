@@ -2,12 +2,23 @@
 namespace InnovationApp\Classes;
 
 use Core\MainController;
-use InnovationApp\Classes\PageManager;
+use InnovationApp\Contracts\IModuleConfig;
 
 abstract class SiteBaseController extends MainController
 {
+    private IModuleConfig $oConfig;
+
     abstract function runSite():array;
 
+    abstract function getCrumbles() : Crumbles;
+
+    function setConfig(IModuleConfig $oConfig):void{
+        $this->oConfig  = $oConfig;
+    }
+    function getConfig() : IModuleConfig
+    {
+        return $this->oConfig;
+    }
     final function run()
     {
         $aData = $this->runSite();

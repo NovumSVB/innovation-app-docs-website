@@ -1,12 +1,20 @@
 <?php
 namespace InnovationApp\modules\Installation;
 
+use InnovationApp\Classes\Crumbles;
 use InnovationApp\Classes\PageManager;
 use InnovationApp\Classes\SiteBaseController;
 
 class Controller extends SiteBaseController
 {
 
+    function getCrumbles(): Crumbles
+    {
+        return new Crumbles([
+            new \InnovationApp\modules\Home\Config(),
+            new Config()
+        ]);
+    }
 
     function runSite():array
     {
