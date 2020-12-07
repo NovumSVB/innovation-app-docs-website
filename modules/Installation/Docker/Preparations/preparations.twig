@@ -1,0 +1,32 @@
+<div class="content-inner">
+    <section id="home-section" class="doc-section">
+        <h2 class="section-title">Prepare Docker installations on Ubuntu 18.04</h2>
+        <div class="section-block">
+
+            <p>
+                Below are scratches that is have made during the installation of the code on our Ubuntu 18.04 server.
+                The steps may differ slightly for your specific situation but are probably similar.
+            </p>
+
+            {% for title, steps in  env_setup_instructions %}
+                <div class="code-block">
+                    <h6>Step {{ loop.index }}. {{ title }}</h6>
+                    <code style="width: 100%">
+                        {% for step in steps %}
+                            <span class="comment"># {{ step.comment }}</span><br />
+                            <span class="prompt">$</span> {{ step.command }}<br />
+                        {% endfor %}
+                    </code>
+                </div>
+            {% endfor %}
+
+            <p>
+                Once this is done you can start installing the actual codebase:
+                <a href="{{ site_map.DockerStart.getUrl() }}">download and start codebase</a>
+            </p>
+
+        </div>
+
+    </section><!--//doc-section-->
+
+</div><!--//content-inner-->

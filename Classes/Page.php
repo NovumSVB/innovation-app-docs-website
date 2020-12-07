@@ -1,6 +1,8 @@
 <?php
 namespace InnovationApp\Classes;
 
+use Core\DataType\Link;
+use Core\DataType\Url;
 use InnovationApp\Contracts\IMenuItem;
 use InnovationApp\Contracts\IModuleConfig;
 
@@ -24,6 +26,10 @@ class Page implements IMenuItem
     function getMenuLabel():string
     {
         return $this->getConfig()->getMenuLabel();
+    }
+    function getLink():Link
+    {
+        return Link::construct($this->getConfig()->getMenuLabel(), new Url($this->getConfig()->getBaseUrl()));
     }
     function getUrl():string
     {

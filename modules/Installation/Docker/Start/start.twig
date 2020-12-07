@@ -1,0 +1,64 @@
+<div class="content-inner">
+    <section id="home-section" class="doc-section">
+        <h2 class="section-title">Download and start the system</h2>
+        <div class="section-block">
+
+
+            <p>
+                If all the required software is installed you can download and run the system. We suggest you install
+                some demo apps first to see what's inside. Clone the
+                <a href="{{ repositories.docker.url }}">git repository</a> from Gitlab or download as a zip archive
+                from here : <a href="{{ urls.docker_util_zip_url }}">latest version as zip</a>. Then <code>cd</code> into the
+                installation directory and start the service.
+            </p>
+
+            <div class="code-block">
+                <h6>Running for the first time</h6>
+                <code style="width:100%;">
+                    <span class="comment"># Clone Docker helper repository.</span><br>
+                    <span class="prompt">$</span> git clone https://gitlab.com/NovumGit/innovation-app-util-docker.git<br>
+                    <br>
+                    <span class="comment">
+                        # Build, create, start and attach containers<br>
+                        # This may take a few minutes the first time as a lot of work needs to be done. Normally you<br>
+                        # can have this done in the background by adding the -d flag but as this is the first time it<br>
+                        # may be a good idea to watch what is happening. If all goes well you can stop the containers<br>
+                        # by pressing ctrl+c and then run them again with the -d flag added so you can forget about<br>
+                        # the background process.<br>
+                    </span>
+                    <span class="prompt">$</span> docker-compose up
+                    <br>
+                    <br>
+                    <span class="comment">
+                        # Install the default applications such as the default home page, documentation site and a<Br>
+                        # repository system that keeps track of (locally) installed systems.<br>
+                    </span>
+                    <span class="prompt">$</span> ./composer update
+                </code>
+            </div>
+            <h3>Install demo's (optional)</h3>
+            <p>
+                We have selected a collection of demo systems for you that you can install with just a single command.
+                If you wish to have some more fine grained control or have a look at the systems that are available
+                for you please head over to the {{ site_map.Demo.getLink()|raw }} page
+
+            </p>
+
+            <div class="code-block">
+                <h6>Install demo's (optional)</h6>
+                <code style="width:100%;">
+                    <span class="comment"># Demo package installation.</span><br>
+                    <span class="prompt">$</span> composer require novum/innovation-app-demo-collection<br>
+                </code>
+            </div>
+
+            <h3>Open admin panel</h3>
+            <p>
+                If you installed the code locally, all system will be reachable via subdomains of innocatieapp.nl.
+                Please go and have a look at the default home page which can be found at  <a href="http://home.innovatieapp.nl">http://home.innovatieapp.nl</a>.
+
+            </p>
+        </div>
+    </section><!--//doc-section-->
+
+</div><!--//content-inner-->

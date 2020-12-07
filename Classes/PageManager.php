@@ -58,7 +58,10 @@ class PageManager
             'Intro' => new Page(Intro\Controller::class, Intro\Config::class),
             'Installation' => new Page(Install\Controller::class, Install\Config::class),
                 'Docker' => new Page(Install\Docker\Controller::class, Install\Docker\Config::class),
-                'Composer' => new Page(Install\Composer\Controller::class, Install\Composer\Config::class),
+                    'DockerPreparations' => new Page(Install\Docker\Preparations\Controller::class, Install\Docker\Preparations\Config::class),
+                    'DockerStart' => new Page(Install\Docker\Start\Controller::class, Install\Docker\Start\Config::class),
+
+            'Composer' => new Page(Install\Composer\Controller::class, Install\Composer\Config::class),
                 'Requirements' => new Page(Install\Requirements\Controller::class, Install\Requirements\Config::class),
             'Demo' => new Page(Demo\Controller::class, Demo\Config::class),
                 'DemoDetail' => new Page(Demo\Detail\Controller::class, Demo\Detail\Config::class),
@@ -96,7 +99,10 @@ class PageManager
                         'page' => $aPages['Requirements']
                     ],
                     'Composer' => [
-                        'page' => $aPages['Composer']
+                        'page' => $aPages['Composer'],
+                        'children' => [
+                            'Preparations' => $aPages['DockerPreparations'],
+                        ]
                     ],
                     'Docker' => [
                         'page' => $aPages['Docker']

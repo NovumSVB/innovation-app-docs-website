@@ -8,18 +8,29 @@
                 container and all facilitating code will be kept hidden so you will be left with only the parts that
                 are relevant when working with the system.
             </p>
-            <h3>Install Docker</h3>
+            <h3>Installation</h3>
             <p>
-                The installation procedure of Docker changes and is documented very well on many other places so i will
-                leave it up to the reader to take care if this part on his own.
+                To install the codebase using Docker some software is required.
             </p>
-            <h3>Demo project</h3>
+            <ol>
+                {% for package in required_software %}
+                    <li>{{ package|raw }}</li>
+                {% endfor %}
+            </ol>
             <p>
-                To obtain the demo project go to it's Gitlab repository:
-                <a href="{{ urls.demo_project_git_repo }}" target="_blank">{{ system_name }} demo project</a>
-                and clone or download the files. To keep things at a logical place, the installation instructions
-                for installing the demo project can be found there as well.
+                Instructions for setting up your environment on Ubuntu can be found here:
+                <a href="{{ site_map.DockerPreparations.getUrl() }}">instructions</a>
             </p>
+
+            <h3>Download and run</h3>
+            <p>
+                Once the required software is installed you can download the core system and install some of
+                the demo API's.<br />
+
+            </p>
+            <a class="btn btn-success" href="{{ site_map.DockerStart.getUrl() }}"><i class="fa fa-smile-beam"></i> Start using your new system</a>
+
+
 
         </div>
 

@@ -22,10 +22,15 @@ function getSiteSettings()
             'installer' => [
                 'url' => 'https://github.com/antonboutkam/hurah-installer',
                 'title' => 'Installer'
+            ],
+            'docker' => [
+                'url' => 'https://gitlab.com/NovumGit/innovation-app-util-docker',
+                'title' => 'docker containers'
             ]
         ],
         'urls' => [
-            'demo_project_git_repo' => 'https://gitlab.com/NovumGit/innovation-app-demo/'
+            'demo_project_git_repo' => 'https://gitlab.com/NovumGit/innovation-app-demo/',
+            'docker_util_zip_url' => 'https://gitlab.com/NovumGit/innovation-app-util-docker/-/archive/master/innovation-app-util-docker-master.zip'
         ],
 /*
         'schemas' => [

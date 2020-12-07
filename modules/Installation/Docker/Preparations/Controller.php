@@ -1,5 +1,5 @@
 <?php
-namespace InnovationApp\modules\Installation\Docker;
+namespace InnovationApp\modules\Installation\Docker\Preparations;
 
 use InnovationApp\Classes\Crumbles;
 use InnovationApp\Classes\PageManager;
@@ -15,7 +15,8 @@ class Controller extends SiteBaseController
         return new Crumbles([
             new \InnovationApp\modules\Home\Config(),
             new InstallationConfig(),
-            new DockerConfig()
+            new DockerConfig(),
+            new Config()
         ]);
     }
 
@@ -23,14 +24,14 @@ class Controller extends SiteBaseController
     {
 
         $aArguments = [
-            'required_software' => Config::getSoftwareRequirements(),
-            'site_map' => PageManager::getAll(),
+            'env_setup_instructions' => Config::getEnvSetupInstructions(),
             'urls' => getSiteSettings()['urls'],
-            'system_name' => getSiteSettings()['system_name']
+            'system_name' => getSiteSettings()['system_name'],
+            'site_map' => PageManager::getAll()
         ];
         return [
 
-            'content' => $this->parse('Installation/Docker/docker.twig', $aArguments),
+            'content' => $this->parse('Installation/Docker/Preparations/preparations.twig', $aArguments),
             'title' => 'Installation via Docker'
         ];
     }

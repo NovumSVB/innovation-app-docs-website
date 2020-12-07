@@ -1321,9 +1321,20 @@ code {
   color: #fff;
   font-weight: bold;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  padding: 0px 8px;
-  padding-top: 0px;
   display: inline-block;
+}
+
+code {
+  padding: 0 8px;
+}
+
+code span.prompt {
+  color: limegreen;
+}
+
+code span.comment {
+  color: #bbbbbb;
+  font-style: italic !important;
 }
 
 info {
@@ -1332,6 +1343,10 @@ info {
   font-weight: bold;
   padding: 0 5px;
   display: inline-block;
+}
+
+.btn-success {
+  color: white !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
