@@ -16,7 +16,7 @@
     "minimum-stability": "dev",
     "require": {
         "PHP": ">=7.3",
-        "novum/domain-innovation-app-docs" : "*",
+        "novum/domain-docs" : "*",
         "hurah/hurah-installer": "*",
         "novum/innovation-app-core": "*"
     },
