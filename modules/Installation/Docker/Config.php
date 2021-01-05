@@ -1,8 +1,8 @@
 <?php
 namespace InnovationApp\modules\Installation\Docker;
 
-use Core\DataType\Link;
-use Core\DataType\Url;
+use Hurah\Types\Type\Link;
+use Hurah\Types\Type\Url;
 use InnovationApp\Contracts\ICrumble;
 use InnovationApp\Contracts\IModuleConfig;
 

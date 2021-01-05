@@ -4,7 +4,7 @@
 namespace InnovationApp\Classes;
 
 
-use Core\DataType\Url;
+use Hurah\Types\Type\Url;
 use InnovationApp\Contracts\ICrumble;
 
 class Crumble implements ICrumble {

@@ -1,8 +1,8 @@
 <?php
 namespace InnovationApp\Classes;
 
-use Core\DataType\Link;
-use Core\DataType\Url;
+use Hurah\Types\Type\Link;
+use Hurah\Types\Type\Url;
 use InnovationApp\Contracts\IMenuItem;
 use InnovationApp\Contracts\IModuleConfig;
 
