@@ -2,13 +2,11 @@
 
 namespace InnovationApp\modules\Commands;
 
-use Cli\Composer\Helper\Application\ApplicationLoader;
+use Cli\Helper\Application\ApplicationLoader;
 use Core\Utils as CoreUtils;
-use Exception\ClassNotFoundException;
 use InnovationApp\Classes\Util;
 use InnovationApp\Contracts\ICrumble;
 use InnovationApp\Contracts\IModuleConfig;
-use Symfony\Component\Console\Command\Command;
 
 class Config implements IModuleConfig, ICrumble
 {
